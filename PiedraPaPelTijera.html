@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+	
+</head>
+<body>
+
+ <script src="lib/jquery-1.11.2.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	 $("#piedra").click(function(){
+     	$("#papeles").fadeOut(0);//
+     	$("#tijeras").fadeOut(0);//
+     	$("#piedras").fadeIn(300);
+    });
+	 $("#papel").click(function(){
+	 	$("#tijeras").fadeOut(0);//
+     	$("#piedras").fadeOut(0);//
+     	$("#papeles").fadeIn(300);
+    });
+	 $("#tijera").click(function(){
+	 	$("#piedras").fadeOut(0);//
+	 	$("#papeles").fadeOut(0);//
+     	$("#tijeras").fadeIn(300);
+    });
+});
+	function num () {
+			var aleatorio =Math.ceil(Math.random()*3);  
+
+			if (aleatorio = 1){
+				var ordenador = document.getElementById('ordenador').innerHTML = "<img src='images/piedra.png' width='148px' height='148px'>";
+			}
+			if (aleatorio = 2){
+				var ordenador = document.getElementById('ordenador').innerHTML = "<img src='images/papel.png' width='148px' height='148px'>";
+			}
+			if (aleatorio = 3){
+				var ordenador = document.getElementById('ordenador').innerHTML = "<img src='images/tijeras.png' width='148px' height='148px'>";
+			}
+	}
+
+	
+</script>
+
+<table border="1">
+	<tr>
+		<td width="150">Jugador</td>
+		<td width="150">Contra</td>
+		<td width="150">Ordenador</td>
+	</tr>
+	<tr>
+		<td width="150" height="150" id="jugador">
+
+			 <img hidden src="images/piedra.png" width="148px" height="148px" id="piedras">
+			 <img hidden src="images/papel.png" width="148px" height="148px" id="papeles">
+			 <img hidden src="images/tijeras.png" width="148px" height="148px" id="tijeras">
+
+		</td>
+		<td width="150" height="150">
+			<img src="images/vs.jpg" width="148px" height="148px">
+		</td>
+		<td width="150" height="150" id="ordenador"></td>
+	</tr>
+	<tr>
+		<td colspan="3" align="center">elige Piedra, Papel o Tijeras</td>
+	</tr>
+	<tr>
+		<td width="150" height="150">
+		 <img src="images/piedra.png" width="148px" height="148px" id="piedra" onclick="num()">
+		</td>
+		<td width="150" height="150">
+		<img src="images/papel.png" width="148px" height="148px" id="papel">
+		</td>
+		<td width="150" height="150">
+			<img src="images/tijeras.png" width="148px" height="148px" id="tijera">
+		</td>
+	</tr>
+</table>
+</body>
+</html>
