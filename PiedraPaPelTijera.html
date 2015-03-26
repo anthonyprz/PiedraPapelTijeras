@@ -8,28 +8,70 @@
  <script src="lib/jquery-1.11.2.min.js"></script>
 
 <script type="text/javascript">
-			var aleatorio =Math.ceil(Math.random()*3);  
-
-		var 1 = "<img src='images/piedra.png' width='148px' height='148px'>";
-		var 2 = "<img src='images/papel.png' width='148px' height='148px'>";
-		var 3 = "<img src='images/tijeras.png' width='148px' height='148px'>";
+		
 
 
 $(document).ready(function() {
 	 $("#piedra").click(function(){
+	 	var aleatorio = Math.ceil(Math.random()*3);  
      	$("#papeles").fadeOut(0);//
      	$("#tijeras").fadeOut(0);//
      	$("#piedras").fadeIn(300);
+     	$("#pa").fadeOut(0);
+     	$("#ti").fadeOut(0);
+     	$("#pi").fadeOut(0);
+
+     	if (aleatorio == 1) {
+
+			$("#pi").fadeIn(0);
+		};
+		if (aleatorio == 2) {
+			$("#pa").fadeIn(0);
+		};
+		if (aleatorio == 3) {
+			$("#ti").fadeIn(0);
+		};
+
     });
 	 $("#papel").click(function(){
+	 	var aleatorio = Math.ceil(Math.random()*3);  
 	 	$("#tijeras").fadeOut(0);//
      	$("#piedras").fadeOut(0);//
      	$("#papeles").fadeIn(300);
+     	$("#pa").fadeOut(0);
+     	$("#ti").fadeOut(0);
+     	$("#pi").fadeOut(0);
+     	
+     	if (aleatorio == 1) {
+
+			$("#pi").fadeIn(0);
+		};
+		if (aleatorio == 2) {
+			$("#pa").fadeIn(0);
+		};
+		if (aleatorio == 3) {
+			$("#ti").fadeIn(0);
+		};
     });
+
 	 $("#tijera").click(function(){
+	 	var aleatorio = Math.ceil(Math.random()*3);  
 	 	$("#piedras").fadeOut(0);//
 	 	$("#papeles").fadeOut(0);//
      	$("#tijeras").fadeIn(300);
+     	$("#pa").fadeOut(0);
+     	$("#ti").fadeOut(0);
+     	$("#pi").fadeOut(0);
+     	
+     	if (aleatorio == 1) {
+			$("#pi").fadeIn(0);
+		};
+		if (aleatorio == 2) {
+			$("#pa").fadeIn(0);
+		};
+		if (aleatorio == 3) {
+			$("#ti").fadeIn(0);
+		};
     });
 });
 
@@ -55,7 +97,12 @@ $(document).ready(function() {
 		<td width="150" height="150">
 			<img src="images/vs.jpg" width="148px" height="148px">
 		</td>
-		<td width="150" height="150" id="ordenador"></td>
+		<td width="150" height="150" >
+		<img src='images/piedra.png' width='148px' height='148px' id="pi" hidden>
+		<img src='images/papel.png' width='148px' height='148px' id="pa" hidden>
+		<img src='images/tijeras.png' width='148px' height='148px' id="ti" hidden>
+
+		</td>
 	</tr>
 	<tr>
 		<td colspan="3" align="center">elige Piedra, Papel o Tijeras</td>
