@@ -8,6 +8,13 @@
  <script src="lib/jquery-1.11.2.min.js"></script>
 
 <script type="text/javascript">
+			var aleatorio =Math.ceil(Math.random()*3);  
+
+		var 1 = "<img src='images/piedra.png' width='148px' height='148px'>";
+		var 2 = "<img src='images/papel.png' width='148px' height='148px'>";
+		var 3 = "<img src='images/tijeras.png' width='148px' height='148px'>";
+
+
 $(document).ready(function() {
 	 $("#piedra").click(function(){
      	$("#papeles").fadeOut(0);//
@@ -25,19 +32,8 @@ $(document).ready(function() {
      	$("#tijeras").fadeIn(300);
     });
 });
-	function num () {
-			var aleatorio =Math.ceil(Math.random()*3);  
 
-			if (aleatorio = 1){
-				var ordenador = document.getElementById('ordenador').innerHTML = "<img src='images/piedra.png' width='148px' height='148px'>";
-			}
-			if (aleatorio = 2){
-				var ordenador = document.getElementById('ordenador').innerHTML = "<img src='images/papel.png' width='148px' height='148px'>";
-			}
-			if (aleatorio = 3){
-				var ordenador = document.getElementById('ordenador').innerHTML = "<img src='images/tijeras.png' width='148px' height='148px'>";
-			}
-	}
+	
 
 	
 </script>
